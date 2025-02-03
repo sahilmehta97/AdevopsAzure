@@ -1,0 +1,6 @@
+@AdevopsAzure_HostAddress = http://localhost:5034
+
+GET {{AdevopsAzure_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
