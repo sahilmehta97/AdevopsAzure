@@ -48,9 +48,7 @@ jobs:
       - name: Azure Login
         uses: azure/login@v1
         with:
-          client-id: ${{ secrets.AZURE_CLIENT_ID }}  # Ensure these secrets are set in your GitHub repo
-          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
           enable-AzPSSession: false
           environment: azurecloud
           allow-no-subscriptions: false
