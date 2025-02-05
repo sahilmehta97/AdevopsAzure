@@ -50,8 +50,12 @@ jobs:
         with:
           client-id: ${{ secrets.AZURE_CLIENT_ID }}  # Ensure these secrets are set in your GitHub repo
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-          client-secret: ${{ secrets.AZURE_CLIENT_SECRET }}
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          enable-AzPSSession: false
+          environment: azurecloud
+          allow-no-subscriptions: false
+          audience: api://AzureADTokenExchange
+          auth-type: OIDC
 
       - name: Download Build Artifact
         uses: actions/download-artifact@v4
