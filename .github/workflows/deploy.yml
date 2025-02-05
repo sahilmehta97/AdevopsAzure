@@ -9,6 +9,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    permissions:
+      id-token: write
+
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
@@ -60,7 +63,7 @@ jobs:
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'my-dotnet-app'  # Replace with your Azure Web App name
+          app-name: 'my-devops-cicd'  # Replace with your Azure Web App name
           publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}  # Ensure this secret is added
           package: ./publish
 
