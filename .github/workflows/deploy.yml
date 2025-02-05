@@ -53,7 +53,7 @@ jobs:
           environment: azurecloud
           allow-no-subscriptions: false
           audience: api://AzureADTokenExchange
-          auth-type: OIDC
+          auth-type: SERVICE_PRINCIPAL
 
       - name: Download Build Artifact
         uses: actions/download-artifact@v4
